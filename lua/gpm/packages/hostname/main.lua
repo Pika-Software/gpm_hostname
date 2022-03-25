@@ -55,16 +55,19 @@ if (SERVER) then
 
 else
 
-    local hostname = cvars.String( cvarName, "Garry's Mod" )
-    function game.HostName()
-        return hostname
+    do
+        local cvars_String = cvars.String
+        local default = "Garry's Mod"
+        function game.HostName()
+            return cvars_String( cvarName, default )
+        end
     end
 
     do
         local net_ReadString = net.ReadString
+        local RunConsoleCommand = RunConsoleCommand
         net.Receive("GPM:SendHostName", function()
-            hostname = net_ReadString()
-            RunConsoleCommand( cvarName, hostname )
+            RunConsoleCommand( cvarName, net_ReadString() )
         end)
     end
 
