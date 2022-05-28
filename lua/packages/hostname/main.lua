@@ -57,7 +57,9 @@ if (SERVER) then
 
     end
 
-else
+end
+
+if (CLIENT) then
 
     local hostname = "Garry's Mod"
     function game.HostName()
@@ -84,6 +86,10 @@ else
         end)
 
     end
+
+    hook.Add("PlayerDisconnected", "GPM:Hostname", function()
+        RunConsoleCommand( cvarName, "" )
+    end)
 
 end
 

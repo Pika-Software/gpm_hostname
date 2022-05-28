@@ -1,9 +1,9 @@
 return {
     name = "Hostname",
     description = "Better hostname functions",
-    version = "1.0.2",
+    version = "1.0.3",
     dependencies = {
-        ["Game Ready"] = ">=1.0.0"
+        ["Game Ready"] = ">=1.6.0"
     },
     author = "PrikolMen:-b",
     license = "MIT"
