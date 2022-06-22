@@ -88,7 +88,7 @@ if (CLIENT) then
     end
 
     hook.Add("PlayerDisconnected", "GPM:Hostname", function()
-        RunConsoleCommand( cvarName, "" )
+        RunConsoleCommand( cvarName, "Garry's Mod" )
     end)
 
 end

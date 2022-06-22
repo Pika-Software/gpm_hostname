@@ -1,7 +1,7 @@
 return {
     name = "Hostname",
     description = "Better hostname functions",
-    version = "1.0.3",
+    version = "1.0.4",
     dependencies = {
         ["Game Ready"] = ">=1.6.0"
     },
